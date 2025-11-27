@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,55 +8,59 @@
     <link rel="stylesheet" href="./src/output.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Press Start 2P', cursive; }
+        body {
+            font-family: 'Press Start 2P', cursive;
+        }
     </style>
 </head>
-<body class=" grid place-items-center text-center">
-<div class="container mt-20 bg-gradient-to-b from-gray-700 to-gray-300 
-            border-[15px] border-gray-400 rounded-xl shadow-2xl p-8 
-            w-[470px]"> 
 
-        <section class="sign  from-gray-300 to-gray-600
-                        p-6 rounded-md shadow-[0_18px_9px_-2px_rgba(48,48,48,0.75)]">
-            <h1 class="text-white text-xl animate-pulse">Bank ATM</h1>
+<body class="bg-gray-200 grid place-items-center min-h-screen">
+    <div class="container mx-auto max-w-md bg-gradient-to-b from-gray-700 to-gray-300 
+            border-8 border-gray-400 rounded-xl shadow-2xl p-4 sm:p-8 w-full">
+
+        <section class="sign bg-gray-600 p-4 sm:p-6 rounded-md shadow-md">
+            <h1 class="text-white text-lg sm:text-xl md:text-2xl animate-pulse text-center">Bank ATM</h1>
         </section>
-        <section class="w-full h-0 border-t-[50px] border-t-gray-600 
-                        border-l-[48px] border-l-transparent 
-                        border-r-[48px] border-r-transparent mt-8"></section>
-        <section class="screen bg-gradient-to-b from-white to-blue-200 
-                        rounded-md p-6 h-[250px] flex flex-col justify-center">
+        <section class="w-full h-0 border-t-[40px] border-t-gray-600 
+                    border-l-[30px] border-l-transparent 
+                    border-r-[30px] border-r-transparent mt-6"></section>
+        <section class="screen bg-gradient-to-b text-center from-white to-blue-200 
+                    rounded-md p-4 sm:p-6 h-56 sm:h-64 flex flex-col justify-center">
 
-            <h3 class="text-black mb-2 text-sm">Your balance is</h3>
+            <h3 class="text-black mb-2 text-sm sm:text-base">Your balance is</h3>
 
-            <span   id="balansshow" class=" text-xl text-black"></span>
+            <span id="balansshow" class="text-xl sm:text-2xl text-black"></span>
 
-            <p class="alerts grid grid-rows-2 text-[10px] mt-4">
+            <p class="alerts grid grid-rows-2 text-[10px] sm:text-xs mt-4">
                 <span class="warning text-red-600"></span>
                 <span class="attempts text-gray-700"></span>
             </p>
         </section>
-        <section class=" w-[400px] h-0 mt-8 
-                        border-b-[100px] border-b-gray-600
-                        border-l-[48px] border-l-transparent
-                        border-r-[48px] border-r-transparent relative">
+        <section class="w-full h-0 mt-6 border-b-[80px] border-b-gray-600
+                    border-l-[30px] border-l-transparent
+                    border-r-[30px] border-r-transparent relative">
 
-            <div class="user-buttons grid grid-cols-3 gap-2 absolute top-6 w-full px-6">
+            <div class="user-buttons grid grid-cols-3 gap-2 absolute top-4 w-full px-2 sm:px-6">
 
-                <button onclick="balanceout(1)" class="absolute top-0 left-0 bg-red-600 text-white px-[30px] py-2 
-                               shadow-md -skew-x-[15deg]">
+                <button onclick="balanceout(1)" class="bg-red-600 text-white px-4 sm:px-6 py-2 
+                           shadow-md -skew-x-12 sm:-skew-x-15 rounded">
                     +
                 </button>
-                <input type="number" id="balans"
-                       class="absolute top-[10px]  left-[90px] w-[100px] text-black px-2 py-1 rounded border border-black text-xs"
-                       placeholder="$00.00">
 
-                <button onclick="balanceout(0)" id="balansInput" class="absolute top-0 right-0 bg-green-600 text-white px-[30px] py-2 
-                               shadow-md skew-x-[15deg]">
-                   out
+                <input type="number" id="balans"
+                    class="w-full sm:w-[70px] text-black px-2 py-1 rounded border border-black text-xs sm:text-sm"
+                    placeholder="$0">
+
+                <button onclick="balanceout(2)" class="bg-green-600 text-white px-4 sm:px-6 py-2 
+                           shadow-md skew-x-12 sm:skew-x-15 rounded">
+                    out
                 </button>
+
             </div>
         </section>
     </div>
+
     <script src="js/balance.js"></script>
 </body>
+
 </html>
